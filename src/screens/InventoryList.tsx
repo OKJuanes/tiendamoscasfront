@@ -39,6 +39,7 @@ const InventoryList: React.FC = () => {
       .then(() => {
         alert("Producto eliminado correctamente");
         setInventory(inventory.filter(item => item.id !== id));
+        navigate("/");
       })
       .catch(error => {
         console.error(error);
